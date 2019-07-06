@@ -1,0 +1,24 @@
+<div>
+  <input (keyup.enter)='createPost(title)' #title type="text" class="form-control">
+
+  <ul>
+    <li *ngFor='let p of posts' class="list-group" class="list-group-item">
+
+      <button (click)='patchPost(p)' class="btn bg-primary">
+        Patch
+      </button>
+
+      <button (click)='putPost(p)' class="btn bg-success">
+        Put
+      </button>
+
+      <button (click)='deletePost(p)' class="btn bg-danger">
+        Delete
+      </button>
+
+      {{p.title}}
+
+    </li>
+
+  </ul>
+</div>
